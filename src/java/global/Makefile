@@ -1,3 +1,5 @@
+MAKEFLAGS += -s
+
 all: main
 
 main:
@@ -5,8 +7,6 @@ main:
 	javac Global.java
 
 test:
-	echo Compiling GlobalTest.java ...
-	javac GlobalTest.java
 	echo Running Unit Tests on Global.java
 	java GlobalTest
 

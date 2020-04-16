@@ -1,14 +1,10 @@
 all: main
 
 main:
-	cd src
-	make
+	@$(MAKE) -C src
 
 test:
-	cd src
-	make
-	make test
+	@$(MAKE) -C src test
 	
 clean:
-	cd src
-	make clean
+	@$(MAKE) -C src clean

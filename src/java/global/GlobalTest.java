@@ -15,7 +15,7 @@ public class GlobalTest
 		displayVector(endStatus);
 		System.exit(EXIT_STATUS);
 	}
-
+	
 	public static void displayVector(Vector<String> v) {
 		for(int i = 0; i < v.size(); i++)
 			System.out.println(v.elementAt(i));

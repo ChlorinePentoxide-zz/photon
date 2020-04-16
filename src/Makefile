@@ -1,14 +1,10 @@
 all: main
 
 main:
-	cd java
-	make
+	@$(MAKE) -C java
 
 test:
-	cd java
-	make
-	make test
+	@$(MAKE) -C java test
 	
 clean:
-	cd java
-	make clean
+	@$(MAKE) -C java clean

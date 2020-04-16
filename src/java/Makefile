@@ -1,14 +1,10 @@
 all: main
 
 main:
-	cd global
-	make
+	@$(MAKE) -C global
 
 test:
-	cd global
-	make
-	make test
+	@$(MAKE) -C global test
 	
 clean:
-	cd global
-	make clean
+	@$(MAKE) -C global clean

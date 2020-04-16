@@ -4,11 +4,13 @@ all: main
 
 main:
 	echo Compiling Global.java ...
-	javac Global.java
+	javac -d ../../../build Global.java
+	echo Compiling GlobalTest.java ...
+	javac -d ../../../build/test GlobalTest.java
+	rm -rf *.class
 
 test:
-	echo Running Unit Tests on Global.java
-	java GlobalTest
+	echo "	java GlobalTest" >> ../../../build/test/Makefile
 
 clean:
 	rm -rf *.class

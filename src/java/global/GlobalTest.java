@@ -8,6 +8,9 @@ public class GlobalTest
 	private static Vector<String> endStatus;
 	
 	public static void main(String args[]) {
+		System.out.println();
+		System.out.println("Testing Global Functions ... ");
+		System.out.println();
 		endStatus = new Vector<String>(1,1);
 		emptyTest();
 		runTest();
@@ -24,6 +27,7 @@ public class GlobalTest
 	public static void emptyTest() {
 		if(Global.isRunning() == true) {
 			endStatus.addElement("Global Init Test : FAIL");
+			EXIT_STATUS = 1;
 		} else {
 			endStatus.addElement("Global Init Test : PASS");
 		}
@@ -33,6 +37,7 @@ public class GlobalTest
 		Global.startProgram();
 		if(Global.isRunning() == false) {
 			endStatus.addElement("Global Run Test : FAIL");
+			EXIT_STATUS = 1;
 		} else {
 			endStatus.addElement("Global Run Test : PASS");
 		}
@@ -43,6 +48,7 @@ public class GlobalTest
 		Global.endProgram();
 		if(Global.isRunning() == true) {
 			endStatus.addElement("Global End Run Test : FAIL");
+			EXIT_STATUS = 1;
 		} else {
 			endStatus.addElement("Global End Run Test : PASS");
 		}
